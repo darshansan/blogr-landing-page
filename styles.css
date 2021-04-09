@@ -1,0 +1,27 @@
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+body .attribution a {
+  color: #3e52a3;
+}
+
+body main {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body main h1,
+body main .header-caption {
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */

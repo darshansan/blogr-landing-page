@@ -11,74 +11,182 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css" />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
     <title>Frontend Mentor | [Blogr]</title>
-
+ 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍. -->
   </head>
   <body>
     <main>
-      <section>
-        Product Overview Pricing Marketplace Features Integrations, Company
-        About Team Blog Careers ,Connect Contact Newsletter LinkedIn Login Sign
-        Up
+      <section class="landing-section">
+        <div class="row nav-bar-container">
+        <div class="d-flex flex-row col-md-9 nav-bar">
+          <strong>Blogr</strong>
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="productMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Product
+            </a>
+            <div class="dropdown-menu" aria-labelledby="productMenuLink">
+              <a class="dropdown-item" href="#">Overview</a>
+              <a class="dropdown-item" href="#">Pricing</a>
+              <a class="dropdown-item" href="#">Marketplace</a>
+              <a class="dropdown-item" href="#">Features</a>
+              <a class="dropdown-item" href="#">Integrations</a>
+            </div>
+          </div> 
+
+        <div class="dropdown show">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="companyMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Company
+          </a>
+          <div class="dropdown-menu" aria-labelledby="companyMenuLink">
+            <a class="dropdown-item" href="#">About</a>
+            <a class="dropdown-item" href="#">Team</a>
+            <a class="dropdown-item" href="#">Blog</a>
+            <a class="dropdown-item" href="#">Careers</a>
+          </div>
+        </div>
+        <div class="dropdown show">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="connectMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Connect
+          </a>
+          <div class="dropdown-menu" aria-labelledby="connectMenuLink">
+            <a class="dropdown-item" href="#">Contact</a>
+            <a class="dropdown-item" href="#">Newsletter</a>
+            <a class="dropdown-item" href="#">LinkedIn</a>
+          </div>
+        </div>
+      
+      </div>
+        <div class="col-md-3 login-container">
+          <button class="default-button login">Login</button>
+          <button class="white-button">Sign Up</button>
+        </div>
+        </div>
+        <div class="intro-container">
         <h1>A modern publishing platform</h1>
         <span class="header-caption"
           >Grow your audience and build your online brand</span
         >
-        <button>Start for Free</button>
-        <button>More</button>
+        <div class="info-btn-container">
+        <button class="white-button">Start for Free</button>
+        <button class="default-button">Learn More</button>
+      </div>
+      </div>
       </section>
-      <section>
+      <section class="design-future">
         <h3>Designed for the future</h3>
+        <div class="row">
+          <div class="col-md-6">
+        <div class="info-container">
         <p>
           <h4>Introducing an extensible editor</h4> Blogr features an exceedingly
-          intuitive interface which lets you focus on one thing: creating
-          content. The editor supports management of multiple blogs and allows
-          easy manipulation of embeds such as images, videos, and Markdown.
-          Extensibility with plugins and themes provide easy ways to add
+          intuitive interface which lets you focus <br>on one thing: creating
+          content. The editor supports management of <br>multiple blogs and allows
+          easy manipulation of embeds such as images, <br>videos, and Markdown.
+          Extensibility with plugins and themes provide <br>easy ways to add
           functionality or change the looks of a blog.
         </p>
+        <br>
         <p>
-          <h4> content management</h4> Flexible content management enables users to
-          easily move through posts. Increase the usability of your blog by
-          adding customized categories, sections, format, or flow. With this
-          functionality, you’re in full control.
+          <h4>Robust content management</h4> Flexible content management enables users to
+          easily move through <br>posts. Increase the usability of your blog by
+          adding customized <br>categories, sections, format, or flow. With this
+          functionality, you’re in <br>full control.
         </p>
+      </div>
+    </div>
+    <div class="col-md-6 editor-desk">
+      <img class="editor-desk-img" src="/images/illustration-editor-desktop.svg" alt="Editor desktop">
+    </div>
+    </div>
       </section>
-      <section>
+      <section class="state-of-art">
+        <div class="row">
+        <div class="col-md-5 mobile-phones">
+          <img src="/images/illustration-phones.svg" alt="Mobile phones">
+        </div>
+        <div class="col-md-7 info-container">
         <p>
-          <h4>State of the Art Infrastructure</h4> With reliability and speed in mind,
-          worldwide data centers provide the backbone for ultra-fast
-          connectivity. This ensures your site will load instantly, no matter
-          where your readers are, keeping your site competitive.
+          <h3>State of the Art Infrastructure</h3> With reliability and speed in mind,
+          worldwide data centers provide the <br>backbone for ultra-fast
+          connectivity. This ensures your site will load <br>instantly, no matter
+          where your readers are, keeping your site <br>competitive.
         </p>
+      </div>
+      </div>
       </section>
-      <section>
+      <section class="source-info">
+        <div class="row">
+          <div class="col-md-5 desktop">
+            <img src="/images/illustration-laptop-desktop.svg" alt="Desktop">
+          </div>
+        <div class="col-md-7 info-container">
         <p>
           <h4>Free, open, simple</h4> Blogr is a free and open source application backed
-          by a large community of helpful developers. It supports features such
-          as code syntax highlighting, RSS feeds, social media integration,
-          third-party commenting tools, and works seamlessly with Google
-          Analytics. The architecture is clean and is relatively easy to learn.
+          by a large <br>community of helpful developers. It supports features such
+          as code <br>syntax highlighting, RSS feeds, social media integration,
+          third-party <br>commenting tools, and works seamlessly with Google
+          Analytics. The <br>architecture is clean and is relatively easy to learn.
         </p>
+        <br>
         <p>
-          Powerful tooling Batteries included. We built a simple and
-          straightforward CLI tool that makes customization and deployment a
-          breeze, but capable of producing even the most complicated sites.
+          <h4>Powerful tooling</h4>Batteries included. We built a simple and
+          straightforward CLI tool that <br>makes customization and deployment a
+          breeze, but capable of <br>producing even the most complicated sites.
         </p>
-      </section>
-
-      Product Overview Pricing Marketplace Features Integrations Company About
-      Team Blog Careers Connect Contact Newsletter LinkedIn
-
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
       </div>
+    </div>
+      </section>
+      <section class="footer-container">
+        <div class="row">
+          <div class="col-md-4 brand-name">
+            <strong>Blogr</strong> </div>
+          <div class="col-md-8 site-map">
+            <table>
+              <tr>
+                 <th>Product</th>
+                 <th>Company</th>
+                 <th>Connect</th>
+              </tr>
+              <tr>
+                 <td><a href="">Overview</a></td>
+                 <td><a href="">About</a></td>
+                 <td><a href="">Contact</a></td>
+              </tr>
+              <tr>
+                 <td><a href="">Pricing</a></td>
+                 <td><a href="">Team</a></td>
+                 <td><a href="">Newsletter</a></td>
+              </tr>
+              <tr>
+                 <td><a href="">Marketplace</a></td>
+                 <td><a href="">Blog</a></td>
+                 <td><a href="">LinkedIn</a></td>
+              </tr>
+              <tr>
+                 <td><a href="">Features</a></td>
+                 <td><a href="">Careers</a></td>
+              </tr>
+              <tr>
+                 <td><a href="">Integrations</a></td>
+              </tr>
+           </table>
+          </div>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+     </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

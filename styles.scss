@@ -23,11 +23,17 @@ $Light-red: hsl(353, 100%, 62%);
 $Very-dark-gray-blue: hsl(237, 17%, 21%);
 $Very-dark-desaturated: hsl(237, 23%, 32%);
 
+@mixin white-button {
+  background-color: $White-text;
+  color: $Light-red;
+}
+
 body {
   font-family: "Overpass", sans-serif;
   font-size: 16px;
   min-height: 100vh;
-  padding: 2rem;
+  color: $Very-dark-black-blue;
+  background-color: $White-text;
   .attribution {
     font-size: 11px;
     text-align: center;
@@ -40,9 +46,221 @@ body {
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
+    overflow-x: hidden;
+    h1 {
+      font-size: 4em;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+
+    h3,
+    h4 {
+      color: $Very-dark-blue-headings;
+    }
+
     h1,
-    .header-caption {
-      text-align: center;
+    h3,
+    h4 {
+      font-weight: 600;
+    }
+
+    section {
+      padding: 2rem;
+      p {
+        margin: 2rem;
+      }
+      .info-container {
+        padding: 3rem;
+        h4 {
+          margin-bottom: 1.8rem;
+        }
+      }
+      h3 {
+        text-align: center;
+        margin: 2rem;
+        margin: 6rem 2rem 0 2rem;
+      }
+
+      &.landing-section {
+        color: $White-text;
+        background: $Light-red; /* For browsers that do not support gradients */
+        background-image: url(/images/bg-pattern-intro.svg),
+          linear-gradient(to right, $Very-light-red, $Light-red);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 26% 52%, center;
+        background-size: 225%, cover;
+        border-bottom-left-radius: 6em 6em;
+        padding: 2em;
+        button {
+          border-radius: 2rem;
+          font-size: 1em;
+          border: 2px solid $White-text;
+          padding: 12px 8px;
+          font-family: "Overpass", sans-serif;
+          font-weight: 600;
+          min-width: 8rem;
+        }
+        .white-button {
+          background-color: $White-text;
+          color: $Light-red;
+        }
+        .white-button:hover,
+        .default-button {
+          background: transparent;
+          color: $White-text;
+        }
+        .default-button {
+          &.login {
+            border: none;
+            &:hover,
+            :active {
+              border: none;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .nav-bar-container {
+          margin: 1rem 2.5rem;
+          .nav-bar {
+            .dropdown-toggle {
+              background-color: transparent;
+              border: none;
+              padding: 0.8rem;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            strong {
+              font-weight: 600;
+              font-size: 2rem;
+              padding: 0 1rem;
+            }
+          }
+          .login-container {
+            float: right;
+          }
+        }
+
+        .intro-container {
+          text-align: center;
+          h1,
+          .header-caption,
+          .info-btn-container {
+            text-align: center;
+          }
+          h1 {
+            margin-bottom: 1rem;
+          }
+          margin: 6rem 2rem;
+          .info-btn-container {
+            margin: 2rem;
+            button {
+              margin: 0.5rem;
+            }
+          }
+        }
+      }
+
+      &.design-future {
+        .editor-desk-img {
+          position: relative;
+          bottom: 6rem;
+          left: 3rem;
+        }
+        .info-container {
+          padding: 7.5rem 1rem 5rem 7rem;
+        }
+      }
+
+      &.state-of-art {
+        height: 25rem;
+        padding: 0 1rem 3rem 1rem;
+        color: $White-text;
+        background: $Very-dark-gray-blue; /* For browsers that do not support gradients */
+        background-image: url(/images/bg-pattern-circles.svg),
+          linear-gradient(
+            to right,
+            $Very-dark-gray-blue,
+            $Very-dark-desaturated
+          );
+        background-position: -50% 85%, 0 0;
+        h3 {
+          color: $White-text;
+          margin: 1rem 0;
+          text-align: left;
+        }
+        border-bottom-left-radius: 6em 6em;
+        border-top-right-radius: 6em 6em;
+        background-repeat: no-repeat, no-repeat;
+        .info-container {
+          float: right;
+          padding: 6rem 6rem 3rem 8rem;
+        }
+        .mobile-phones {
+          img {
+            position: relative;
+            bottom: 17%;
+            left: 19%;
+          }
+        }
+        .row,
+        .info-container,
+        .mobile-phones {
+          height: inherit;
+        }
+      }
+
+      &.source-info {
+        padding: 5rem 2rem 8rem 2rem;
+        .info-container {
+          margin-top: 11rem;
+          float: right;
+          padding-left: 8rem;
+        }
+        .desktop {
+          img {
+            position: relative;
+            right: 19rem;
+            top: 3rem;
+          }
+        }
+      }
+
+      &.footer-container {
+        color: $White-text;
+        background-color: $Very-dark-black-blue;
+        border-top-right-radius: 6em 6em;
+        .brand-name {
+          font-size: 2rem;
+          font-weight: 600;
+          text-align: center;
+        }
+        .site-map {
+          table {
+            th {
+              padding: 1rem 6rem;
+              &:first-child {
+                padding-left: 0;
+              }
+            }
+            td {
+              padding: 0.4rem 6rem;
+              &:first-child {
+                padding-left: 0;
+              }
+              a {
+                color: $White-text;
+                &:hover {
+                  cursor: pointer;
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

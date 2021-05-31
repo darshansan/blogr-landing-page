@@ -82,6 +82,7 @@ body {
         margin: 6rem 2rem 0 2rem;
       }
 
+      /* Styles related to the landing section of the application */
       &.landing-section {
         color: $White-text;
         background: $Light-red; /* For browsers that do not support gradients */
@@ -115,27 +116,59 @@ body {
             border: none;
             &:hover,
             :active {
-              border: none;
+              -webkit-appearance: none;
+              appearance: none;
               text-decoration: underline;
+              box-shadow: none;
             }
           }
         }
 
+        /* Navigation Bar styles for the Desktop version */
         .nav-bar-container {
           margin: 1rem 2.5rem;
           .nav-bar {
-            .dropdown-toggle {
-              background-color: transparent;
-              border: none;
-              padding: 0.8rem;
-              &:hover {
-                text-decoration: underline;
+            .dropdown {
+              padding: 8px 0;
+              .dropdown-toggle {
+                background-color: transparent;
+                border: none;
+                padding: 0.8rem;
+                &:hover {
+                  text-decoration: underline;
+                }
+                &:active:focus,
+                &:active,
+                &:focus {
+                  box-shadow: none;
+                }
+                &::after {
+                  content: url(/images/icon-arrow-light.svg);
+                  border-top: 0;
+                  position: relative;
+                  top: 3px;
+                  right: 3px;
+                }
+              }
+              .dropdown-menu {
+                border-radius: 10px;
+                a:hover {
+                  font-weight: 600;
+                  background-color: inherit;
+                }
+              }
+              &.show {
+                .dropdown-toggle::after {
+                  transform: rotate(180deg);
+                  top: 28px;
+                  left: 6px;
+                }
               }
             }
             strong {
               font-weight: 600;
-              font-size: 2rem;
-              padding: 0 1rem;
+              font-size: 3rem;
+              padding: 0 3.8rem 0 1rem;
             }
           }
           .login-container {
@@ -160,9 +193,73 @@ body {
               margin: 0.5rem;
             }
           }
+          .header-caption {
+            color: $White-text;
+            font-weight: 300;
+          }
+        }
+
+        @media screen and (max-width: 376px) {
+          background-position: 35% 35%, center;
+          padding: 1rem;
+          background-size: 300%, cover;
+          .intro-container {
+            margin: 0;
+            padding: 1rem;
+            h1 {
+              font-size: 2rem;
+              margin: 4rem 0 0 0;
+              padding: 0 0.5rem;
+            }
+          }
+          .nav-bar-container {
+            margin: 0;
+            .nav-bar {
+              margin: 1.5rem 0;
+              padding: 0;
+              .dropdown.desktop-version {
+                display: none;
+              }
+              .hamburger-icon {
+                background-image: url(/images/icon-hamburger.svg);
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                margin: 12px;
+                position: absolute;
+                right: 0;
+              }
+            }
+            .modal-dialog {
+              top: 15vh;
+              .modal-body {
+                div {
+                  text-align: center;
+                  padding: 1rem;
+                }
+              }
+            }
+          }
+          .login-container {
+            display: none;
+          }
+          .intro-container {
+            .header-caption {
+              font-size: 1rem;
+              padding: 1rem;
+            }
+            .info-btn-container {
+              margin: 1rem 0 6rem 0;
+              button {
+                font-size: 0.8rem;
+                padding: 8px 8px;
+              }
+            }
+          }
         }
       }
 
+      /* Styles related to the Design Future section of the application */
       &.design-future {
         .editor-desk-img {
           position: relative;
@@ -172,8 +269,36 @@ body {
         .info-container {
           padding: 7.5rem 1rem 5rem 7rem;
         }
+        .editor-desk-mobile {
+          display: none;
+        }
+        @media screen and (max-width: 376px) {
+          h3 {
+            margin: 4rem 1rem 0.5rem 1rem;
+          }
+          .info-container {
+            padding: 1rem;
+            h4 {
+              margin: 0 2rem 1.8rem 2rem;
+            }
+          }
+          .editor-desk {
+            display: none;
+          }
+          .editor-desk-mobile {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            .editor-desk-mobile-img {
+              margin: 2rem 0rem;
+              height: 20rem;
+              width: 24rem;
+            }
+          }
+        }
       }
 
+      /* Styles related to the State of art section of the application */
       &.state-of-art {
         height: 25rem;
         padding: 0 1rem 3rem 1rem;
@@ -210,57 +335,153 @@ body {
         .mobile-phones {
           height: inherit;
         }
-      }
-
-      &.source-info {
-        padding: 5rem 2rem 8rem 2rem;
-        .info-container {
-          margin-top: 11rem;
-          float: right;
-          padding-left: 8rem;
-        }
-        .desktop {
-          img {
+        @media screen and (max-width: 376px) {
+          margin-top: 10rem;
+          background-position: 48% 322%, 0 0;
+          background-size: 170%, cover;
+          height: 35rem;
+          .mobile-phones {
+            display: flex;
+            justify-content: center;
             position: relative;
-            right: 19rem;
-            top: 3rem;
+            bottom: 36%;
+            img {
+              height: 75%;
+              width: 115%;
+              left: 0;
+              bottom: 0;
+            }
+          }
+          .info-container {
+            padding: 1.9rem;
+            position: relative;
+            bottom: 24rem;
+            h3 {
+              text-align: center;
+            }
           }
         }
       }
 
+      /* Styles related to the source information section of the application */
+      &.source-info {
+        height: 60rem;
+        margin: 5rem 0 8rem 0;
+        padding: 2rem 0;
+        .row {
+          height: inherit;
+        }
+        .info-container {
+          float: right;
+          padding-top: 12rem;
+          padding-left: 8rem;
+        }
+        .desktop {
+          background-image: url(/images/illustration-laptop-desktop.svg);
+          background-position: 71% 10%;
+          background-size: 160%;
+          background-repeat: no-repeat;
+        }
+        @media screen and (max-width: 376px) {
+          margin: 2rem 0;
+          .info-container {
+            padding: 0 2.5rem;
+          }
+          .desktop {
+            height: 20rem;
+            background-image: url(/images/illustration-laptop-mobile.svg);
+            background-position: 50% 50%;
+            background-size: 120%;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+
+      /* Styles related to the footer or site map section of the application */
       &.footer-container {
         color: $White-text;
         background-color: $Very-dark-black-blue;
         border-top-right-radius: 6em 6em;
         .brand-name {
-          font-size: 2rem;
+          font-size: 2.5rem;
           font-weight: 600;
           text-align: center;
+          margin: 1rem 0;
+        }
+      }
+      .site-map {
+        .menu-columns {
+          list-style-type: none;
+          display: inline-block;
+          vertical-align: top;
+          li {
+            padding: 0.4rem 6rem;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+          .menu-category {
+            font-weight: 600;
+            padding: 2rem 6rem;
+            &:hover {
+              cursor: default;
+              text-decoration: none;
+            }
+          }
+          &:first-child {
+            padding-left: 0;
+            li {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 376px) {
+        .brand-name {
+          margin: 1.5rem 0;
         }
         .site-map {
-          table {
-            th {
-              padding: 1rem 6rem;
-              &:first-child {
-                padding-left: 0;
-              }
+          .menu-columns {
+            display: block;
+            padding-left: 0;
+            li {
+              text-align: center;
             }
-            td {
-              padding: 0.4rem 6rem;
-              &:first-child {
-                padding-left: 0;
-              }
-              a {
-                color: $White-text;
-                &:hover {
-                  cursor: pointer;
-                  text-decoration: underline;
-                }
+            &:first-child {
+              li {
+                padding-left: 6rem;
               }
             }
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 376px) {
+    section {
+      padding: 1.5rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    .info-container {
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+    .modal-backdrop {
+      background-color: transparent;
+    }
+  }
+  &.modal-open {
+    .hamburger-icon {
+      background-image: url(/images/icon-close.svg) !important;
     }
   }
 }

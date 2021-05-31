@@ -43,6 +43,11 @@ body main h4 {
 
 body main section {
   padding: 2rem;
+  /* Styles related to the landing section of the application */
+  /* Styles related to the Design Future section of the application */
+  /* Styles related to the State of art section of the application */
+  /* Styles related to the source information section of the application */
+  /* Styles related to the footer or site map section of the application */
 }
 
 body main section p {
@@ -74,6 +79,7 @@ body main section.landing-section {
   background-size: 225%, cover;
   border-bottom-left-radius: 6em 6em;
   padding: 2em;
+  /* Navigation Bar styles for the Desktop version */
 }
 
 body main section.landing-section button {
@@ -103,28 +109,65 @@ body main section.landing-section .default-button.login {
 
 body main section.landing-section .default-button.login:hover,
 body main section.landing-section .default-button.login :active {
-  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   text-decoration: underline;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body main section.landing-section .nav-bar-container {
   margin: 1rem 2.5rem;
 }
 
-body main section.landing-section .nav-bar-container .nav-bar .dropdown-toggle {
+body main section.landing-section .nav-bar-container .nav-bar .dropdown {
+  padding: 8px 0;
+}
+
+body main section.landing-section .nav-bar-container .nav-bar .dropdown .dropdown-toggle {
   background-color: transparent;
   border: none;
   padding: 0.8rem;
 }
 
-body main section.landing-section .nav-bar-container .nav-bar .dropdown-toggle:hover {
+body main section.landing-section .nav-bar-container .nav-bar .dropdown .dropdown-toggle:hover {
   text-decoration: underline;
+}
+
+body main section.landing-section .nav-bar-container .nav-bar .dropdown .dropdown-toggle:active:focus, body main section.landing-section .nav-bar-container .nav-bar .dropdown .dropdown-toggle:active, body main section.landing-section .nav-bar-container .nav-bar .dropdown .dropdown-toggle:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body main section.landing-section .nav-bar-container .nav-bar .dropdown .dropdown-toggle::after {
+  content: url(/images/icon-arrow-light.svg);
+  border-top: 0;
+  position: relative;
+  top: 3px;
+  right: 3px;
+}
+
+body main section.landing-section .nav-bar-container .nav-bar .dropdown .dropdown-menu {
+  border-radius: 10px;
+}
+
+body main section.landing-section .nav-bar-container .nav-bar .dropdown .dropdown-menu a:hover {
+  font-weight: 600;
+  background-color: inherit;
+}
+
+body main section.landing-section .nav-bar-container .nav-bar .dropdown.show .dropdown-toggle::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 28px;
+  left: 6px;
 }
 
 body main section.landing-section .nav-bar-container .nav-bar strong {
   font-weight: 600;
-  font-size: 2rem;
-  padding: 0 1rem;
+  font-size: 3rem;
+  padding: 0 3.8rem 0 1rem;
 }
 
 body main section.landing-section .nav-bar-container .login-container {
@@ -154,6 +197,68 @@ body main section.landing-section .intro-container .info-btn-container button {
   margin: 0.5rem;
 }
 
+body main section.landing-section .intro-container .header-caption {
+  color: white;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 376px) {
+  body main section.landing-section {
+    background-position: 35% 35%, center;
+    padding: 1rem;
+    background-size: 300%, cover;
+  }
+  body main section.landing-section .intro-container {
+    margin: 0;
+    padding: 1rem;
+  }
+  body main section.landing-section .intro-container h1 {
+    font-size: 2rem;
+    margin: 4rem 0 0 0;
+    padding: 0 0.5rem;
+  }
+  body main section.landing-section .nav-bar-container {
+    margin: 0;
+  }
+  body main section.landing-section .nav-bar-container .nav-bar {
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+  body main section.landing-section .nav-bar-container .nav-bar .dropdown.desktop-version {
+    display: none;
+  }
+  body main section.landing-section .nav-bar-container .nav-bar .hamburger-icon {
+    background-image: url(/images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin: 12px;
+    position: absolute;
+    right: 0;
+  }
+  body main section.landing-section .nav-bar-container .modal-dialog {
+    top: 15vh;
+  }
+  body main section.landing-section .nav-bar-container .modal-dialog .modal-body div {
+    text-align: center;
+    padding: 1rem;
+  }
+  body main section.landing-section .login-container {
+    display: none;
+  }
+  body main section.landing-section .intro-container .header-caption {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  body main section.landing-section .intro-container .info-btn-container {
+    margin: 1rem 0 6rem 0;
+  }
+  body main section.landing-section .intro-container .info-btn-container button {
+    font-size: 0.8rem;
+    padding: 8px 8px;
+  }
+}
+
 body main section.design-future .editor-desk-img {
   position: relative;
   bottom: 6rem;
@@ -162,6 +267,39 @@ body main section.design-future .editor-desk-img {
 
 body main section.design-future .info-container {
   padding: 7.5rem 1rem 5rem 7rem;
+}
+
+body main section.design-future .editor-desk-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 376px) {
+  body main section.design-future h3 {
+    margin: 4rem 1rem 0.5rem 1rem;
+  }
+  body main section.design-future .info-container {
+    padding: 1rem;
+  }
+  body main section.design-future .info-container h4 {
+    margin: 0 2rem 1.8rem 2rem;
+  }
+  body main section.design-future .editor-desk {
+    display: none;
+  }
+  body main section.design-future .editor-desk-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  body main section.design-future .editor-desk-mobile .editor-desk-mobile-img {
+    margin: 2rem 0rem;
+    height: 20rem;
+    width: 24rem;
+  }
 }
 
 body main section.state-of-art {
@@ -201,20 +339,76 @@ body main section.state-of-art .mobile-phones {
   height: inherit;
 }
 
+@media screen and (max-width: 376px) {
+  body main section.state-of-art {
+    margin-top: 10rem;
+    background-position: 48% 322%, 0 0;
+    background-size: 170%, cover;
+    height: 35rem;
+  }
+  body main section.state-of-art .mobile-phones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    bottom: 36%;
+  }
+  body main section.state-of-art .mobile-phones img {
+    height: 75%;
+    width: 115%;
+    left: 0;
+    bottom: 0;
+  }
+  body main section.state-of-art .info-container {
+    padding: 1.9rem;
+    position: relative;
+    bottom: 24rem;
+  }
+  body main section.state-of-art .info-container h3 {
+    text-align: center;
+  }
+}
+
 body main section.source-info {
-  padding: 5rem 2rem 8rem 2rem;
+  height: 60rem;
+  margin: 5rem 0 8rem 0;
+  padding: 2rem 0;
+}
+
+body main section.source-info .row {
+  height: inherit;
 }
 
 body main section.source-info .info-container {
-  margin-top: 11rem;
   float: right;
+  padding-top: 12rem;
   padding-left: 8rem;
 }
 
-body main section.source-info .desktop img {
-  position: relative;
-  right: 19rem;
-  top: 3rem;
+body main section.source-info .desktop {
+  background-image: url(/images/illustration-laptop-desktop.svg);
+  background-position: 71% 10%;
+  background-size: 160%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 376px) {
+  body main section.source-info {
+    margin: 2rem 0;
+  }
+  body main section.source-info .info-container {
+    padding: 0 2.5rem;
+  }
+  body main section.source-info .desktop {
+    height: 20rem;
+    background-image: url(/images/illustration-laptop-mobile.svg);
+    background-position: 50% 50%;
+    background-size: 120%;
+    background-repeat: no-repeat;
+  }
 }
 
 body main section.footer-container {
@@ -224,33 +418,83 @@ body main section.footer-container {
 }
 
 body main section.footer-container .brand-name {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
+  margin: 1rem 0;
 }
 
-body main section.footer-container .site-map table th {
-  padding: 1rem 6rem;
+body main section .site-map .menu-columns {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top;
 }
 
-body main section.footer-container .site-map table th:first-child {
-  padding-left: 0;
-}
-
-body main section.footer-container .site-map table td {
+body main section .site-map .menu-columns li {
   padding: 0.4rem 6rem;
 }
 
-body main section.footer-container .site-map table td:first-child {
+body main section .site-map .menu-columns li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+body main section .site-map .menu-columns .menu-category {
+  font-weight: 600;
+  padding: 2rem 6rem;
+}
+
+body main section .site-map .menu-columns .menu-category:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+body main section .site-map .menu-columns:first-child {
   padding-left: 0;
 }
 
-body main section.footer-container .site-map table td a {
-  color: white;
+body main section .site-map .menu-columns:first-child li {
+  padding-left: 0;
 }
 
-body main section.footer-container .site-map table td a:hover {
-  cursor: pointer;
-  text-decoration: underline;
+@media screen and (max-width: 376px) {
+  body main section .brand-name {
+    margin: 1.5rem 0;
+  }
+  body main section .site-map .menu-columns {
+    display: block;
+    padding-left: 0;
+  }
+  body main section .site-map .menu-columns li {
+    text-align: center;
+  }
+  body main section .site-map .menu-columns:first-child li {
+    padding-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  body section {
+    padding: 1.5rem;
+  }
+  body h3 {
+    font-size: 1.5rem;
+  }
+  body h4 {
+    font-size: 1.5rem;
+  }
+  body .info-container {
+    text-align: center;
+  }
+  body .info-container br {
+    display: none;
+  }
+  body .modal-backdrop {
+    background-color: transparent;
+  }
+}
+
+body.modal-open .hamburger-icon {
+  background-image: url(/images/icon-close.svg) !important;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -25,7 +25,7 @@
         <div class="row nav-bar-container">
         <div class="d-flex flex-row col-md-9 nav-bar">
           <strong>Blogr</strong>
-          <div class="dropdown">
+          <div class="dropdown desktop-version">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="productMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Product
             </a>
@@ -36,9 +36,11 @@
               <a class="dropdown-item" href="#">Features</a>
               <a class="dropdown-item" href="#">Integrations</a>
             </div>
-          </div> 
+          
+          
+          </div>
 
-        <div class="dropdown show">
+        <div class="dropdown desktop-version">
           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="companyMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Company
           </a>
@@ -49,7 +51,7 @@
             <a class="dropdown-item" href="#">Careers</a>
           </div>
         </div>
-        <div class="dropdown show">
+        <div class="dropdown desktop-version">
           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="connectMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Connect
           </a>
@@ -59,7 +61,58 @@
             <a class="dropdown-item" href="#">LinkedIn</a>
           </div>
         </div>
-      
+        <span class="hamburger-icon" data-toggle="modal" data-target="#exampleModal"></span>
+        <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> 
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="product-mobile-menu">
+          <a class="menu-toggler" data-toggle="collapse" href="#productMobileMenu" role="button" aria-expanded="false" aria-controls="productMobileMenu">
+            product
+          </a>
+        <div class="collapse" id="productMobileMenu">
+          <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+      </div>
+      <div class="company-mobile-menu">
+        <a class="menu-toggler" data-toggle="collapse" href="#companyMobileMenu" role="button" aria-expanded="false" aria-controls="companyMobileMenu">
+          Company
+        </a>
+      <div class="collapse" id="companyMobileMenu">
+        <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div>
+    </div>
+      <div class="connect-mobile-menu">
+        <a class="menu-toggler" data-toggle="collapse" href="#connectMobileMenu" role="button" aria-expanded="false" aria-controls="connectMobileMenu">
+          Connect
+        </a>
+      <div class="collapse" id="connectMobileMenu">
+        <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="white-button" data-dismiss="modal">Login</button>
+        <button type="button" class="default-button sign-up">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
         <div class="col-md-3 login-container">
           <button class="default-button login">Login</button>
@@ -68,8 +121,8 @@
         </div>
         <div class="intro-container">
         <h1>A modern publishing platform</h1>
-        <span class="header-caption"
-          >Grow your audience and build your online brand</span
+        <h4 class="header-caption"
+          >Grow your audience and build your online brand</h4
         >
         <div class="info-btn-container">
         <button class="white-button">Start for Free</button>
@@ -80,6 +133,9 @@
       <section class="design-future">
         <h3>Designed for the future</h3>
         <div class="row">
+          <div class="col-md-6 editor-desk-mobile">
+            <img class="editor-desk-mobile-img" src="./images/illustration-editor-mobile.svg" alt="Editor desktop">
+          </div>
           <div class="col-md-6">
         <div class="info-container">
         <p>
@@ -100,14 +156,14 @@
       </div>
     </div>
     <div class="col-md-6 editor-desk">
-      <img class="editor-desk-img" src="/images/illustration-editor-desktop.svg" alt="Editor desktop">
+      <img class="editor-desk-img" src="./images/illustration-editor-desktop.svg" alt="Editor desktop">
     </div>
     </div>
       </section>
       <section class="state-of-art">
         <div class="row">
         <div class="col-md-5 mobile-phones">
-          <img src="/images/illustration-phones.svg" alt="Mobile phones">
+          <img src="./images/illustration-phones.svg" alt="Mobile phones">
         </div>
         <div class="col-md-7 info-container">
         <p>
@@ -122,7 +178,6 @@
       <section class="source-info">
         <div class="row">
           <div class="col-md-5 desktop">
-            <img src="/images/illustration-laptop-desktop.svg" alt="Desktop">
           </div>
         <div class="col-md-7 info-container">
         <p>
@@ -146,35 +201,27 @@
           <div class="col-md-4 brand-name">
             <strong>Blogr</strong> </div>
           <div class="col-md-8 site-map">
-            <table>
-              <tr>
-                 <th>Product</th>
-                 <th>Company</th>
-                 <th>Connect</th>
-              </tr>
-              <tr>
-                 <td><a href="">Overview</a></td>
-                 <td><a href="">About</a></td>
-                 <td><a href="">Contact</a></td>
-              </tr>
-              <tr>
-                 <td><a href="">Pricing</a></td>
-                 <td><a href="">Team</a></td>
-                 <td><a href="">Newsletter</a></td>
-              </tr>
-              <tr>
-                 <td><a href="">Marketplace</a></td>
-                 <td><a href="">Blog</a></td>
-                 <td><a href="">LinkedIn</a></td>
-              </tr>
-              <tr>
-                 <td><a href="">Features</a></td>
-                 <td><a href="">Careers</a></td>
-              </tr>
-              <tr>
-                 <td><a href="">Integrations</a></td>
-              </tr>
-           </table>
+            <ul class="menu-columns">
+              <li class="menu-category">Product</li>
+              <li>Overview</li>
+              <li>Pricing</li>
+              <li>Marketplace</li>
+              <li>Features</li>
+              <li>Integrations</li>
+            </ul> 
+            <ul class="menu-columns">
+              <li class="menu-category">Company</li>
+              <li>About</li>
+              <li>Team</li>
+              <li>Blog</li>
+              <li>Careers</li>
+            </ul>
+            <ul class="menu-columns">
+              <li class="menu-category">Connect</li>
+              <li>Contact</li>
+              <li>Newsletter</li>
+              <li>LinkedIn</li>
+            </ul> 
           </div>
         </div>
         <div class="attribution">
